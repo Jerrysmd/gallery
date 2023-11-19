@@ -1,0 +1,138 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #999999;
+    font-family: "SmileySans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    z-index: 0;
+}
+
+@font-face {
+    font-family: "SmileySans";
+    src: url('../fonts/SmileySans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.logo {
+    position: fixed;
+}
+
+.main {
+    margin-top: 50px;
+}
+
+.main .gd-modal-loaded .logo {
+    display: none;
+}
+
+.logo:hover {
+    cursor: pointer;
+    color: #ffe0c9;
+
+}
+
+.bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    z-index: 1;
+    /*border-bottom: 1px solid black;*/
+    /* -webkit-box-shadow: 0 3px 5px #c0c0c0; */
+    /* -moz-box-shadow: 0 3px 5px #c0c0c0; */
+    /* box-shadow: 0 3px 5px #c0c0c0; */
+}
+
+.date-display {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: black;
+    font-family: "SmileySans";
+}
+
+#date-container {
+    margin-top: 4px;
+    width: 165px;
+    height: 40px;
+}
+
+#date-header-row {
+
+}
+
+#date-header-row td {
+    font-size: 13px;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 0 2px;
+    border-left: 1px solid black;
+}
+
+
+#date-table-row {
+
+}
+
+#date-table-row td {
+    font-size: 22px;
+    text-align: left;
+    vertical-align: top;
+    padding: 0 2px;
+}
+
+.title {
+    display: block;
+    margin-top: 10px;
+    color: #000000;
+    font-family: "SmileySans";
+    text-align: center;
+    font-size: 23px;
+}
+
+
+@media screen and (max-width: 740px) {
+    .date-display {
+    }
+    #date-container{
+        width: 81.69px;
+    }
+    .disp-day{
+        display: none;
+    }
+}
+
+a:hover, a:active {
+    color: #55a0f6;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:visited, a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#hideInfo {
+    color: black;
+    position: absolute;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top:0;
+    margin-top: 27px;
+    height: 50px;
+}

@@ -1,0 +1,62 @@
+baseURL = "https://jerrysmd.github.io/"
+title = "Gallery"
+disableKinds = ["section", "taxonomy", "term"]
+timeout = 3000000
+
+[params]
+# Set to enable Plausible Analytics.
+plausible_domain = ""
+# Set to enable CloudFlare Web Analytics
+cf_analytics_token = ""
+# Set to enable self deploy Plausible Analytics. (content inside the tag src)
+plausible_self_deploy_snip_url = ""
+# Set to enable umami analytics
+umami_domain = ""
+umami_site_id = ""
+
+[params.gallerydeluxe]
+# Shuffle the images in the gallery to give the impression of a new gallery each page load.
+shuffle = false
+
+# Reverse the order of the images in the gallery.
+reverse = false
+
+# Enable Exif data in the gallery.
+# See https://gohugo.io/content-management/image-processing/#exif-data for how to filter tags.
+enable_exif = true
+
+[caches]
+[caches.images]
+dir = ':cacheDir/gallerydeluxe'
+maxAge = "4320h"                # 6 months.
+
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 70
+anchor = "smart"
+[imaging.exif]
+disableDate = false
+disableLatLong = true
+includeFields = 'Model|LensModel|FNumber|ExposureTime'
+
+[server]
+[[server.headers]]
+for = '/**'
+[server.headers.values]
+Referrer-Policy = 'strict-origin-when-cross-origin'
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+[[module.mounts]]
+source = "content"
+target = "content"
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.imports]]
+path = "gallerydeluxe"

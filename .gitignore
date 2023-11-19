@@ -1,0 +1,6 @@
+public/
+resources/
+assets/jsconfig.json
+content/images/*.jpg
+.hugo_build.lock
+go.sum

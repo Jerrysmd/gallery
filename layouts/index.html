@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width,
+          initial-scale=1.0"/>
+    <title>{{ .Title }}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#555555">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    {{ partial "gallerydeluxe/head.html" . }}
+    {{ partial "head.html" . }}
+</head>
+
+
+{{/* 'images' is a path to a leaf bundle with a index.md file and lots of JPG images. */}}
+{{ $gallery := partial "gallerydeluxe/init.html" (dict "sourcePath" "images") }}
+{{ $params := site.Params.gallerydeluxe }}
+{{/* We currently only support 1 gallery per page, which is create4 by an element with id 'gallerydeluxe',
+and a valid data url.
+*/}}
+<body id="gallerydeluxe" data-gd-image-data-url="{{ $gallery.imageDataUrl }}">
+<header class="bar">
+    {{ partial "header.html" . }}
+</header>
+<div class="main">
+    <div id="gd-modal" class="gd-modal">
+        <span id="gd-modal-close" class="gd-modal-close">&times;</span>
+        {{ if $params.enable_exif }}
+        <div id="gd-modal-exif" class="gd-modal-exif"></div>
+        {{ end }}
+    </div>
+</div>
+</body>
+</html>
