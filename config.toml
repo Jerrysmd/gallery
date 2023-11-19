@@ -1,4 +1,4 @@
-baseURL = "https://jerrysmd.github.io/"
+baseURL = "https://jerrysmd.github.io/gallery"
 title = "Gallery"
 disableKinds = ["section", "taxonomy", "term"]
 timeout = 3000000
