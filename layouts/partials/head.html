@@ -1,21 +1,8 @@
-{{ $components := resources.Get "js/components.js" }}
 {{ $css := resources.Get "css/styles.css" }}
 {{ if hugo.IsProduction}}
     {{ $css = $css | minify | fingerprint }}
-    {{ $components = $components | minify | fingerprint }}
 {{ end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
 {{ with site.Params.plausible_domain }}
-    <script defer data-domain="{{ . }}" src={{ with site.Params.plausible_self_deploy_snip_url
-            }} "{{ . }}" {{ else }} "https://plausible.io/js/plausible.js"{{ end }}></script>
-{{ end }}
-{{ with site.Params.cf_analytics_token }}
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-            data-cf-beacon='{"token": "{{ . }}"}'></script>
-{{ end }}
-{{ with site.Params.umami_domain }}
-    {{ $umami_domain := . }}
-    {{ with site.Params.umami_site_id }}
-      <script async src="https://{{ $umami_domain }}/script.js" data-website-id="{{ . }}"></script>
-    {{ end }}
+<script defer data-domain="{{ . }}" src="https://plausible.io/js/plausible.js"></script>
 {{ end }}
