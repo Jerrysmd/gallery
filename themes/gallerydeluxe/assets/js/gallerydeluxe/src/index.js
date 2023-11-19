@@ -199,6 +199,11 @@ let GalleryDeluxe = {
 
 		// Load the gallery.
 		let images = await (await fetch(dataUrl)).json();
+		images.sort((a, b) => {
+			const dateA = new Date(a.exif.Date);
+			const dateB = new Date(b.exif.Date);
+			return dateA - dateB;
+		});
 
 		if (params.shuffle) {
 			// Shuffle them to make it more interesting.

@@ -19,7 +19,7 @@ umami_site_id = ""
 shuffle = false
 
 # Reverse the order of the images in the gallery.
-reverse = false
+reverse = true
 
 # Enable Exif data in the gallery.
 # See https://gohugo.io/content-management/image-processing/#exif-data for how to filter tags.
@@ -32,7 +32,7 @@ maxAge = "4320h"                # 6 months.
 
 [imaging]
 resampleFilter = "CatmullRom"
-quality = 70
+quality = 71
 anchor = "smart"
 [imaging.exif]
 disableDate = false
