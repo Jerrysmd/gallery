@@ -1,4 +1,4 @@
->See this [Gallery Deluxe Starter](https://github.com/bep/gallerydeluxe_starter) for a fast route to get this up and running.
+>This gallery base on [Gallery Deluxe](https://github.com/bep/gallerydeluxe) and [arc](https://github.com/Sped0n/gallerydeluxe)
 
 * [Configuration](#configuration)
 * [Credits](#credits)
