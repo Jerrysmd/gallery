@@ -1,25 +1,22 @@
-/* Import font from CDN */
-@import url('https://cdn.jsdelivr.net/npm/cn-fontsource-smiley-sans-oblique-regular/font.css');
-
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: #999999;
-    font-family: "Smiley Sans Oblique", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    font-family: "SmileySans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     z-index: 0;
 }
 
-/* @font-face {
+@font-face {
     font-family: "SmileySans";
     src: url('../fonts/SmileySans.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-} */
+}
 
 .logo {
     position: fixed;
