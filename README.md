@@ -5,9 +5,9 @@
 
 A Hugo Module to show a photo gallery. It's very fast/effective, especially if you have lots of images on display.
 
-This theme is what you see on [staticbattery.com](https://staticbattery.com/) which, at the time of writing this, [scores 100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fstaticbattery.com%2F&form_factor=mobile) at Google PageSpeed for both mobile and desktop.
+This theme is what you see on [jerrysmd.github.io/gallery](https://jerrysmd.github.io/gallery/) which, at the time of writing this, [scores 100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fstaticbattery.com%2F&form_factor=mobile) at Google PageSpeed for both mobile and desktop.
 
-[<img src="https://raw.githubusercontent.com/bep/gallerydeluxe/main/images/tn.jpg">](https://staticbattery.com/)
+![preview](preview.png)
 
 ## Configuration
 
