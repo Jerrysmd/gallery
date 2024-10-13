@@ -12,7 +12,7 @@ body {
 
 @font-face {
     font-family: "SmileySans";
-    src: url('../fonts/SmileySans.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/npm/font-smiley-sans@1.0.0/SmileySans-Oblique.ttf.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
