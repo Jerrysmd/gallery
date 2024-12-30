@@ -68,9 +68,6 @@
   padding: 0.75rem;
   opacity: 0.75;
   filter: drop-shadow(-1px -1px 2px #ccc);
-  font-family: "Smiley Sans Oblique", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .gd-modal-exif-ontimeout {

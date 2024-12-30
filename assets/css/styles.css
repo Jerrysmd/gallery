@@ -1,4 +1,5 @@
 @import url("https://chinese-fonts-cdn.deno.dev/packages/dyh/dist/SmileySans-Oblique/result.css");
+@import url('https://npm.elemecdn.com/@font/font-smiley-sans/style.css');
 
 html,
 body {
@@ -6,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #999999;
-    font-family: "Smiley Sans Oblique", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    font-family: "Smiley Sans Oblique", 'Smiley Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     z-index: 0;
@@ -50,7 +51,6 @@ body {
     top: 0;
     right: 0;
     color: black;
-    font-family: "Smiley Sans Oblique";
 }
 
 #date-container {
@@ -87,7 +87,6 @@ body {
     display: block;
     margin-top: 10px;
     color: #000000;
-    font-family: "Smiley Sans Oblique";
     text-align: center;
     font-size: 23px;
 }
