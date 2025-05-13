@@ -32,7 +32,7 @@ maxAge = "4320h"                # 6 months.
 
 [imaging]
 resampleFilter = "CatmullRom"
-quality = 71
+quality = 91
 anchor = "smart"
 [imaging.exif]
 disableDate = false
