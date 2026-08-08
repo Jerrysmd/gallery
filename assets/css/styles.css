@@ -1,5 +1,9 @@
-@import url("https://cn-font.claude-code-best.win/packages/dyh/dist/SmileySans-Oblique/result.css");
-@import url('https://cdn.jsdelivr.net/npm/font-smiley-sans@1.0.0/style.min.css');
+@font-face {
+    font-family: "Smiley Sans";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/SmileySans-Oblique.woff2") format("woff2");
+}
 
 html,
 body {
@@ -7,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #999999;
-    font-family: "Smiley Sans Oblique", 'Smiley Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    font-family: "Smiley Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     z-index: 0;
