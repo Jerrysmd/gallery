@@ -2,7 +2,7 @@
     font-family: "Smiley Sans";
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/SmileySans-Oblique.woff2") format("woff2");
+    src: url("../fonts/SmileySans-Oblique.woff2") format("woff2");
 }
 
 html,
