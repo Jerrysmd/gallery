@@ -2,6 +2,7 @@
 {{ if hugo.IsProduction}}
     {{ $css = $css | minify | fingerprint }}
 {{ end }}
+<link rel="preload" href="{{ "fonts/SmileySans-Oblique.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
 {{ with site.Params.plausible_domain }}
 <script defer data-domain="{{ . }}" src="https://plausible.io/js/plausible.js"></script>
