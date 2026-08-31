@@ -5,7 +5,6 @@ on:
   push:
     branches:
     - main
-  pull_request:
 
 concurrency:
   group: "pages"
@@ -14,26 +13,34 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    env:
+      HUGO_CACHEDIR: /tmp/hugo_cache
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v5
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          #fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.146.5'
-          extended: true
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build
-        run: hugo --minify
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./public
+    - uses: actions/checkout@v5
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        #fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: '0.146.5'
+        extended: true
+    - name: Cache Hugo resources
+      uses: actions/cache@v4
+      with:
+        path: |
+          ${{ env.HUGO_CACHEDIR }}
+          resources
+        key: ${{ runner.os }}-hugo-${{ hashFiles('content/**', 'config.toml') }}
+        restore-keys: |
+          ${{ runner.os }}-hugo-
+    - name: Build
+      run: hugo --gc --minify
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/main' }}
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./public

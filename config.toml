@@ -31,8 +31,8 @@ dir = ':cacheDir/gallerydeluxe'
 maxAge = "4320h"                # 6 months.
 
 [imaging]
-resampleFilter = "CatmullRom"
-quality = 100
+resampleFilter = "box"
+quality = 75
 anchor = "smart"
 [imaging.exif]
 disableDate = false
